@@ -14,4 +14,7 @@ class UserInfoViewController: UIViewController {
         
     }
 
+    @IBAction func topeDoneButton() {
+        dismiss(animated: true)
+    }
 }
