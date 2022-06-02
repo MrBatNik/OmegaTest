@@ -9,7 +9,7 @@ import Foundation
 
 final class AlbumsTableViewModel {
     
-    var albums: AlbumModel?
+    var albums: [SearchResult]?
     var url: String?
     
     func fetchData(from url: String, completion: @escaping ((AlbumModel) -> Void)) {
@@ -21,7 +21,16 @@ final class AlbumsTableViewModel {
     }
     
     func formSearchURL(_ name: String) {
-        url = "https://itunes.apple.com/search?term=\(name)&entity=album&attribute=albumTerm"
+        let newValue = name.replacingOccurrences(of: " ", with: "&")
+        
+        url = "https://itunes.apple.com/search?term=\(newValue)&entity=album&attribute=albumTerm"
+    }
+    
+    func fetchImageData(from url: String) -> Data {
+        guard let imageURL = URL(string: url) else { return Data() }
+        guard let data = try? Data(contentsOf: imageURL) else { return Data() }
+        
+        return data
     }
     
 }

@@ -16,10 +16,15 @@ class UserInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userInfoLabel.text = viewModel.retrieveUser()
+        setupLabelText()
     }
 
     @IBAction func topeDoneButton() {
         dismiss(animated: true)
     }
+    
+    private func setupLabelText() {
+        userInfoLabel.text = viewModel.retrieveUser()
+    }
+    
 }

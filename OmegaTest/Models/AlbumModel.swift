@@ -15,8 +15,10 @@ struct AlbumModel: Codable {
 
 struct SearchResult: Codable {
     
+    let collectionId: Int
     let artistName: String
     let collectionName: String
+    let artworkUrl60: String?
     let artworkUrl100: String?
     let trackCount: Int
     let releaseDate: String

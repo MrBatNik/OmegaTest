@@ -27,9 +27,9 @@
 		1BC0397B28451430009F86F5 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0397A28451430009F86F5 /* RegistrationViewController.swift */; };
 		1BC0397D28451447009F86F5 /* AlbumInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0397C28451447009F86F5 /* AlbumInformationViewController.swift */; };
 		1BC0398528464156009F86F5 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0398428464156009F86F5 /* UserInfoViewController.swift */; };
-		1BC0398E28464BBE009F86F5 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0398D28464BBE009F86F5 /* AlbumTableViewCell.swift */; };
 		1BFCE5F328494739002FBD77 /* AlbumsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFCE5F228494739002FBD77 /* AlbumsTableViewModel.swift */; };
 		1BFCE5F528494778002FBD77 /* AlbumInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFCE5F428494778002FBD77 /* AlbumInformationViewModel.swift */; };
+		1BFCE5F728497D43002FBD77 /* SongsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFCE5F628497D43002FBD77 /* SongsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,9 +55,9 @@
 		1BC0397A28451430009F86F5 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		1BC0397C28451447009F86F5 /* AlbumInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInformationViewController.swift; sourceTree = "<group>"; };
 		1BC0398428464156009F86F5 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
-		1BC0398D28464BBE009F86F5 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		1BFCE5F228494739002FBD77 /* AlbumsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewModel.swift; sourceTree = "<group>"; };
 		1BFCE5F428494778002FBD77 /* AlbumInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInformationViewModel.swift; sourceTree = "<group>"; };
+		1BFCE5F628497D43002FBD77 /* SongsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				1B5AD4E728476F5D00F53B2B /* AlbumModel.swift */,
+				1BFCE5F628497D43002FBD77 /* SongsModel.swift */,
 				1BB5B7DD2848F8F000D0B5E9 /* UserModel.swift */,
 			);
 			path = Models;
@@ -111,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				1BC039782845130F009F86F5 /* AlbumsTableViewController.swift */,
-				1BC0398D28464BBE009F86F5 /* AlbumTableViewCell.swift */,
 				1BFCE5F228494739002FBD77 /* AlbumsTableViewModel.swift */,
 			);
 			path = " AlbumsListView";
@@ -295,8 +295,8 @@
 				1BC039612844D1D6009F86F5 /* AppDelegate.swift in Sources */,
 				1BC0398528464156009F86F5 /* UserInfoViewController.swift in Sources */,
 				1BB5B7DE2848F8F000D0B5E9 /* UserModel.swift in Sources */,
+				1BFCE5F728497D43002FBD77 /* SongsModel.swift in Sources */,
 				1B5AD4E828476F5D00F53B2B /* AlbumModel.swift in Sources */,
-				1BC0398E28464BBE009F86F5 /* AlbumTableViewCell.swift in Sources */,
 				1BFCE5F328494739002FBD77 /* AlbumsTableViewModel.swift in Sources */,
 				1BFCE5F528494778002FBD77 /* AlbumInformationViewModel.swift in Sources */,
 				1BC0397B28451430009F86F5 /* RegistrationViewController.swift in Sources */,

@@ -114,62 +114,30 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="albumCell" id="f7K-Gs-6Mw" customClass="AlbumTableViewCell" customModule="OmegaTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88.5" width="320" height="50.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="albumCell" textLabel="st2-0J-0zn" detailTextLabel="IWH-hb-xBO" style="IBUITableViewCellStyleSubtitle" id="f7K-Gs-6Mw">
+                                <rect key="frame" x="0.0" y="88.5" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f7K-Gs-6Mw" id="Srt-Bx-K0C">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Songs" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VMy-uz-kkG">
-                                            <rect key="frame" x="256" y="30" width="48" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="st2-0J-0zn">
+                                            <rect key="frame" x="16" y="6" width="25" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RaH-qI-WRa">
-                                            <rect key="frame" x="16" y="0.0" width="50.5" height="50.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="RaH-qI-WRa" secondAttribute="height" multiplier="1:1" id="2F2-S5-xst"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CD4-pH-meT">
-                                            <rect key="frame" x="68" y="0.0" width="233" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f0H-5h-krc">
-                                            <rect key="frame" x="68" y="22" width="49" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IWH-hb-xBO">
+                                            <rect key="frame" x="16" y="22.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="f0H-5h-krc" firstAttribute="leading" secondItem="RaH-qI-WRa" secondAttribute="trailing" constant="8" symbolic="YES" id="2hB-Qs-c2i"/>
-                                        <constraint firstAttribute="trailing" secondItem="CD4-pH-meT" secondAttribute="trailing" constant="20" symbolic="YES" id="7QV-1f-6No"/>
-                                        <constraint firstAttribute="bottom" secondItem="f0H-5h-krc" secondAttribute="bottom" id="9Wr-lT-Bj3"/>
-                                        <constraint firstItem="f0H-5h-krc" firstAttribute="top" secondItem="CD4-pH-meT" secondAttribute="bottom" constant="8" id="KJy-Dj-9RF"/>
-                                        <constraint firstAttribute="bottom" secondItem="VMy-uz-kkG" secondAttribute="bottom" id="O9E-Te-p7D"/>
-                                        <constraint firstItem="RaH-qI-WRa" firstAttribute="top" secondItem="Srt-Bx-K0C" secondAttribute="top" id="QaP-0y-57a"/>
-                                        <constraint firstAttribute="trailing" secondItem="VMy-uz-kkG" secondAttribute="trailing" constant="16" id="TSs-bz-34h"/>
-                                        <constraint firstItem="VMy-uz-kkG" firstAttribute="leading" secondItem="f0H-5h-krc" secondAttribute="trailing" constant="16" id="hP3-5c-5Yy"/>
-                                        <constraint firstItem="RaH-qI-WRa" firstAttribute="height" secondItem="Srt-Bx-K0C" secondAttribute="height" id="jMb-dg-44t"/>
-                                        <constraint firstItem="CD4-pH-meT" firstAttribute="top" secondItem="Srt-Bx-K0C" secondAttribute="top" id="lgM-io-bga"/>
-                                        <constraint firstItem="RaH-qI-WRa" firstAttribute="leading" secondItem="Srt-Bx-K0C" secondAttribute="leading" constant="16" id="rGv-c6-yHi"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="albumCover" destination="RaH-qI-WRa" id="vsa-BJ-vHH"/>
-                                    <outlet property="albumLabel" destination="f0H-5h-krc" id="HJU-C6-XFB"/>
-                                    <outlet property="artistLabel" destination="CD4-pH-meT" id="pUf-hX-blD"/>
-                                    <outlet property="songsLabel" destination="VMy-uz-kkG" id="h7f-X1-Fah"/>
                                     <segue destination="l6s-5s-Gfm" kind="show" id="9NX-Um-eJt"/>
                                 </connections>
                             </tableViewCell>
@@ -180,6 +148,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Search" id="m27-5v-hzc">
+                        <barButtonItem key="backBarButtonItem" title=" " id="v6k-Ce-EZ3"/>
                         <barButtonItem key="rightBarButtonItem" image="person.circle" catalog="system" id="a8f-0G-LXJ">
                             <connections>
                                 <segue destination="Oxr-8Z-vXk" kind="presentation" id="2TB-r7-HeX"/>
@@ -199,7 +168,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LHB-3I-ZTs">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LHB-3I-ZTs">
                                 <rect key="frame" x="85" y="60" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Blk-Vn-bab"/>
@@ -215,7 +184,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEy-hc-6Db">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEy-hc-6Db">
                                         <rect key="frame" x="0.0" y="20.5" width="288" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -276,7 +245,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="albumCoverImage" destination="LHB-3I-ZTs" id="uYz-mu-qTV"/>
-                        <outlet property="labelsStackView" destination="JXI-Sx-Y3r" id="Vcn-td-tAt"/>
+                        <outlet property="albumLabel" destination="APv-D8-WSh" id="X7o-Dd-h0F"/>
+                        <outlet property="albumYearLabel" destination="GZv-1q-mOO" id="WIP-8w-Mcx"/>
+                        <outlet property="artistLabel" destination="sEy-hc-6Db" id="Zuh-Qa-Stt"/>
                         <outlet property="tracksList" destination="6J4-56-2qq" id="uEb-zi-YBc"/>
                     </connections>
                 </viewController>
@@ -592,7 +563,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2I3-MA-R1D" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Ese-7m-x1A">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
