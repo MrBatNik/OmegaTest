@@ -13,23 +13,20 @@ final class NetworkManager {
     
     private init() {}
     
-    func fetchAlbums(completion: @escaping (([AlbumModel]) -> Void)) {
-        guard let URL = URL(string: "https://api.npoint.io/e7a66be6073ea4d5dea6") else { return }
+    func fetchAlbums(from url: String, completion: @escaping ((AlbumModel) -> Void)) {
+        guard let URL = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: URL) { (data: Data?, response: URLResponse?, error: Error?) -> Void in
             if error == nil {
                 let statusCode = (response as! HTTPURLResponse).statusCode
                 print("URL Session Task Succeeded: HTTP \(statusCode)")
                 print("TRYING TO DECODE DATA:")
-                let decoder = JSONDecoder()
                 if let data = data {
                     do {
-                        let decodedObject = try decoder.decode([AlbumModel].self, from: data)
+                        let decodedObject = try JSONDecoder().decode(AlbumModel.self, from: data)
                         print("DECODED \(AlbumModel.self) SUCCESSFULLY")
                         print(decodedObject)
-                        DispatchQueue.main.async {
-                            completion(decodedObject)
-                        }
+                        completion(decodedObject)
                     } catch let DecodingError.dataCorrupted(context) {
                         print(context)
                     } catch let DecodingError.keyNotFound(key, context) {
@@ -48,7 +45,8 @@ final class NetworkManager {
             } else {
                 print("URL Session Task Failed: %@", error!.localizedDescription)
             }
-        }.resume()
+        }
+        .resume()
     }
     
 }

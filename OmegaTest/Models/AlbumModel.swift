@@ -9,4 +9,16 @@ import Foundation
 
 struct AlbumModel: Codable {
     
+    let results: [SearchResult]
+    
+}
+
+struct SearchResult: Codable {
+    
+    let artistName: String
+    let collectionName: String
+    let artworkUrl100: String?
+    let trackCount: Int
+    let releaseDate: String
+
 }

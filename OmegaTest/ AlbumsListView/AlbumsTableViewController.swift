@@ -8,6 +8,8 @@
 import UIKit
 
 class AlbumsTableViewController: UITableViewController {
+    
+    private let viewModel = AlbumsTableViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,11 @@ class AlbumsTableViewController: UITableViewController {
             target: self,
             action: #selector(tapSingOutButton)
         )
+        viewModel.formSearchURL("Maroon")
+        viewModel.fetchData(from: viewModel.url ?? "") { [unowned self] albums in
+            self.viewModel.albums = albums
+            self.tableView.reloadData()
+        }
     }
     
     @objc func tapSingOutButton() {
@@ -27,13 +34,14 @@ class AlbumsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        viewModel.albums?.results.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as! AlbumTableViewCell
+        guard let data = viewModel.albums?.results[indexPath.row] else { return cell }
         
-        cell.populateCellWithData()
+        cell.populateCellWithData(with: data)
         
         return cell
     }
