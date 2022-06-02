@@ -11,6 +11,9 @@
 		1B5AD4E128476B6E00F53B2B /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5AD4E028476B6E00F53B2B /* ObservableObject.swift */; };
 		1B5AD4E828476F5D00F53B2B /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5AD4E728476F5D00F53B2B /* AlbumModel.swift */; };
 		1B8C135E2847CB2200939BE3 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C135D2847CB2200939BE3 /* ViewControllerExtension.swift */; };
+		1BB5B7D82848187600D0B5E9 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5B7D72848187600D0B5E9 /* StringExtension.swift */; };
+		1BB5B7DA2848B96700D0B5E9 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5B7D92848B96700D0B5E9 /* RegistrationViewModel.swift */; };
+		1BB5B7DC2848BDCC00D0B5E9 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5B7DB2848BDCC00D0B5E9 /* Messages.swift */; };
 		1BC039612844D1D6009F86F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC039602844D1D6009F86F5 /* AppDelegate.swift */; };
 		1BC039632844D1D6009F86F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC039622844D1D6009F86F5 /* SceneDelegate.swift */; };
 		1BC039652844D1D6009F86F5 /* AuthorisationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC039642844D1D6009F86F5 /* AuthorisationViewController.swift */; };
@@ -31,6 +34,9 @@
 		1B5AD4E028476B6E00F53B2B /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		1B5AD4E728476F5D00F53B2B /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		1B8C135D2847CB2200939BE3 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		1BB5B7D72848187600D0B5E9 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		1BB5B7D92848B96700D0B5E9 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		1BB5B7DB2848BDCC00D0B5E9 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		1BC0395D2844D1D6009F86F5 /* OmegaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmegaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC039602844D1D6009F86F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BC039622844D1D6009F86F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1BC0397A28451430009F86F5 /* RegistrationViewController.swift */,
+				1BB5B7D92848B96700D0B5E9 /* RegistrationViewModel.swift */,
 			);
 			path = RegistrationView;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				1B5AD4E028476B6E00F53B2B /* ObservableObject.swift */,
+				1BB5B7DB2848BDCC00D0B5E9 /* Messages.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -130,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				1B8C135D2847CB2200939BE3 /* ViewControllerExtension.swift */,
+				1BB5B7D72848187600D0B5E9 /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -269,8 +278,10 @@
 			files = (
 				1BC039752844F3F4009F86F5 /* NetworkManager.swift in Sources */,
 				1BC039792845130F009F86F5 /* AlbumsTableViewController.swift in Sources */,
+				1BB5B7D82848187600D0B5E9 /* StringExtension.swift in Sources */,
 				1B8C135E2847CB2200939BE3 /* ViewControllerExtension.swift in Sources */,
 				1BC039652844D1D6009F86F5 /* AuthorisationViewController.swift in Sources */,
+				1BB5B7DC2848BDCC00D0B5E9 /* Messages.swift in Sources */,
 				1BC039612844D1D6009F86F5 /* AppDelegate.swift in Sources */,
 				1BC0398528464156009F86F5 /* UserInfoViewController.swift in Sources */,
 				1B5AD4E128476B6E00F53B2B /* ObservableObject.swift in Sources */,
@@ -279,6 +290,7 @@
 				1BC0397B28451430009F86F5 /* RegistrationViewController.swift in Sources */,
 				1BC0397D28451447009F86F5 /* AlbumInformationViewController.swift in Sources */,
 				1BC039772844F400009F86F5 /* StorageManger.swift in Sources */,
+				1BB5B7DA2848B96700D0B5E9 /* RegistrationViewModel.swift in Sources */,
 				1BC039632844D1D6009F86F5 /* SceneDelegate.swift in Sources */,
 				1B5AD4DD284768C300F53B2B /* AuthorisationViewModel.swift in Sources */,
 			);

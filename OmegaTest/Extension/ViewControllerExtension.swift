@@ -23,11 +23,6 @@ extension UIViewController {
             self,
             name: responder,
             object: nil)
-        
-//        NotificationCenter.default.removeObserver(
-//            self,
-//            name: UIResponder.keyboardWillHideNotification,
-//            object: nil)
     }
     
 }
