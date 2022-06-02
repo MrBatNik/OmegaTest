@@ -26,3 +26,14 @@ extension UIViewController {
     }
     
 }
+
+extension UIViewController {
+    
+    func showAlert(_ title: String, with message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        
+        present(alert, animated: true)
+    }
+    
+}

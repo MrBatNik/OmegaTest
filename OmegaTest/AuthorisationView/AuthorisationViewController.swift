@@ -37,8 +37,18 @@ class AuthorisationViewController: UIViewController {
         view.endEditing(true)
     }
     
-    // MARK: IBActions
-    
+    @IBAction func tapSignInButton(_ sender: Any) {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        if viewModel.checkUserCredentials(email, password: password) {
+            performSegue(withIdentifier: "searchSegue", sender: nil)
+            emailTextField.text = ""
+            passwordTextField.text = ""
+        } else {
+            showAlert("Invalid credentials", with: "Wrong email or password")
+        }
+    }
     
     deinit {
         removeKeyboardNotification(UIResponder.keyboardWillShowNotification)

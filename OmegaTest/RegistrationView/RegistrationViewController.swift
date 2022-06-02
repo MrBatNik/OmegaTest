@@ -51,7 +51,32 @@ class RegistrationViewController: UIViewController {
     }
     
     @IBAction func tapRegistrationButton() {
-        navigationController?.popToRootViewController(animated: true)
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextField.text ?? ""
+        let dateOfBirth = dateOfBirthTextField.text ?? ""
+        let number = numberTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        let date = viewModel.getDateFromText(dateOfBirth) ?? Date()
+
+        if firstName.isValid(typeOf: .name),
+           lastName.isValid(typeOf: .name),
+           viewModel.ageValidation(date),
+           number.isValid(typeOf: .number),
+           email.isValid(typeOf: .email),
+           password.isValid(typeOf: .password) {
+            viewModel.saveUserDate(
+                firstName: firstName,
+                lastName: lastName,
+                dateOfBirth: dateOfBirth,
+                number: number,
+                email: email,
+                password: password
+            )
+            showAlert("Registration complete", with: "You successfully completed registration")
+        } else {
+            showAlert("Wrong input", with: "All fields should be filled in correctly.")
+        }
     }
     
     deinit {
@@ -64,7 +89,6 @@ class RegistrationViewController: UIViewController {
 extension RegistrationViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        let text = (textField.text ?? "") + string
         guard let text = textField.text else { return false }
 
         switch textField {

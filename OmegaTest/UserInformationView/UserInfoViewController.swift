@@ -8,10 +8,15 @@
 import UIKit
 
 class UserInfoViewController: UIViewController {
+    
+    @IBOutlet weak var userInfoLabel: UILabel!
+    
+    private let viewModel = UserInformationViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userInfoLabel.text = viewModel.retrieveUser()
     }
 
     @IBAction func topeDoneButton() {

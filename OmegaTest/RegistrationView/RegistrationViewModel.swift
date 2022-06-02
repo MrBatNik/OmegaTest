@@ -64,4 +64,10 @@ final class RegistrationViewModel {
         return userAge < 18 ? false : true
     }
     
+    func saveUserDate(firstName: String, lastName: String, dateOfBirth: String, number: String, email: String, password: String) {
+        let user = User(firstName: firstName, lastName: lastName, dateOfBirth: dateOfBirth, number: number, email: email, password: password)
+        
+        StorageManger.shared.saveUserData(user)
+    }
+    
 }

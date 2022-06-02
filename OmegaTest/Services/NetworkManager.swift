@@ -13,7 +13,7 @@ final class NetworkManager {
     
     private init() {}
     
-    static func fetchAlbums(completion: @escaping (([AlbumModel]) -> Void)) {
+    func fetchAlbums(completion: @escaping (([AlbumModel]) -> Void)) {
         guard let URL = URL(string: "https://api.npoint.io/e7a66be6073ea4d5dea6") else { return }
         
         URLSession.shared.dataTask(with: URL) { (data: Data?, response: URLResponse?, error: Error?) -> Void in
